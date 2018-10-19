@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <input type="text" placeholder="ingrese el titulo de la pelicula" style="width 100%" [(ngModel)]="title">
+  
+  
+  
+  <ion-card *ngIf="movie">
+      <img src="{{movie.Poster}}"/>
+      <ion-card-content>
+        <ion-card-title>
+         {{movie.Title}}
+          </ion-card-title>
+        <p>
+          {{movie.Plot}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+
+
+  <button ion-button (click)="search()">Buscar Pelicula</button>
+</ion-content>
